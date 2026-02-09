@@ -1,15 +1,11 @@
 import jwt from 'jsonwebtoken';
 
 const ERROR_MESSAGE = 'Email o password incorrectos';
-const _VALID_USER = {
-  email: 'user@seekglobal.co',
-  password: '1234567',
-  name: 'Admin'
-}
+
 const VALID_USER = {
-  email: 'admin@admin.com',
-  password: '123aA@',
-  name: 'Admin'
+  email: 'user@seekglobal.co',
+  password: '1234567aA@',
+  name: 'Juan Pérez'
 }
 
 export async function POST(request) {

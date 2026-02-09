@@ -26,7 +26,7 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 bg-white p-20 rounded-md shadow-md"
+      className="flex flex-col gap-4 bg-white sm:p-20 p-10 rounded-md shadow-md"
     >
       <h1 className="text-2xl font-bold">Iniciar sesión</h1>
       <Input

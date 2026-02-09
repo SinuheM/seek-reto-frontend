@@ -15,8 +15,8 @@ const Navigation = () => {
         </div>
         {user ? (
           <div className='flex items-center gap-4'>
-            <span>Hola, {user.name}</span>
-            |
+            <span className='hidden sm:inline-block'>Hola, {user.name}</span>
+            <span className='hidden sm:inline-block'> | </span>
             <Button onClick={logout}>
               Cerrar sesión
             </Button>

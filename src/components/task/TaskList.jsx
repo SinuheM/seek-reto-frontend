@@ -48,7 +48,7 @@ const TaskList = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-4 bg-gray-50 py-3 px-4 rounded">
+    <div className="max-w-full w-4xl mx-auto mt-4 bg-gray-50 py-3 px-4 rounded">
       <h2 className="text-xl font-bold mb-4">Tareas</h2>
       {loading && <p>Cargando...</p>}
       {error && <p className="text-red-600">{error}</p>}
