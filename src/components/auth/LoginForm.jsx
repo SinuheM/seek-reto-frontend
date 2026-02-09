@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 const LoginForm = () => {
   const router = useRouter()
   const { values, handleChange } = useForm()
-  const { isAuthenticated, login, logout } = useAuth()
+  const { login } = useAuth()
 
   const handleSubmit = (e) => {
     e.preventDefault()

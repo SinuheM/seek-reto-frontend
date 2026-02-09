@@ -4,9 +4,11 @@ import { useState } from "react";
 
 const useAuth = () => {
   const router = useRouter()
-  const storedUser = window.localStorage.getItem(USER_STORAGE_KEY)
-  console.log('storedUser', storedUser)
-  const [user, setUser] = useState(storedUser ? JSON.parse(storedUser) : null)
+  const [user, setUser] = useState(() => {
+    if (typeof window === 'undefined') return null
+    const stored = window.localStorage.getItem(USER_STORAGE_KEY)
+    return stored ? JSON.parse(stored) : null
+  })
   const isAuthenticated = Boolean(user)
 
   const saveToken = (token) => {
@@ -48,6 +50,8 @@ const useAuth = () => {
   }
 
   const getAccessToken = () => {
+    if (typeof window === 'undefined') return null
+
     const token = localStorage.getItem(TOKEN_STORAGE_KEY)
 
     if (!token) {

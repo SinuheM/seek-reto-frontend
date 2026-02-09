@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React from 'react'
 
-const Input = ({ type, placeholder, label, id, className, value, onChange, ...props }) => {
+const Input = ({ type, placeholder, label, id, className, value = '', onChange, ...props }) => {
   return (
     <div className="flex flex-col gap-1">
       <label htmlFor={id}>{label}</label>
